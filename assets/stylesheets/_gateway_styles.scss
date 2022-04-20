@@ -1,0 +1,205 @@
+// reset
+@import "reset";
+
+// gateway styles
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&display=swap');
+$sans: 'Open Sans';
+$white: #FFFFFF !default;
+$black: #333333;
+$gray: #F2F2F2;
+$text: #323130;
+$border: #C4CBD4;
+$error: #F8C0C0;
+$warning: #FFECB4;
+$placeholder: #A39F9B;
+$primary: #0050B2 !default;
+$offwhite: #E5E5E5;
+$lighttext: #605E5C;
+
+@import "tables";
+
+// layout
+body, html {
+  font-family: $sans,
+  sans-serif;
+  padding: 0;
+  margin: 0;
+}
+main {
+  color: $text;
+  a {color: $primary;}
+}
+.flex-container {
+  display: flex;
+}
+.col {
+  flex: 1;
+}
+.layout-container {
+  width: 100%;
+  max-width: 1170px;
+  margin-right: auto;
+  margin-left: auto;
+}
+section + section {
+  margin-top: 1.5em;
+}
+.break {
+  flex-basis: 100%;
+  height: 0;
+}
+
+//breadcrumbs";
+.breadcrumbs {
+  padding: 8px 0;
+  span {font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: $lighttext;
+  a {color: $lighttext;}
+  &:after {content: '/'; margin-left: 8px; margin-right: 8px}
+  &:last-of-type {font-weight: bold;}
+  &:last-of-type::after {content: "";}
+  }
+}
+
+//@import "gateway_styles/forms";
+label, input, textarea, select {
+font-size: 16px;
+line-height: 24px;}
+label {
+  display: block;
+  font-weight: 600;
+}
+//search 
+input[type="search"] {
+  width: 300px;
+  margin-bottom: 1em;
+}
+
+//payloads
+.payload label {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+}
+.payload .value {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+//headings
+h1, .alpha {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 54px;
+  margin: 10px 0;
+}
+h2 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  span {
+    font-weight: normal;
+  }
+}
+h3 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
+  span {
+    font-weight: normal;
+  }
+}
+
+//header
+header {
+  background: black;
+  color: white;
+  font-family: $sans, sans-serif;
+  padding: 12px 0;
+  border-bottom: 5px solid $primary;
+  a {color: white; text-decoration: none}
+  #logo_container {
+    flex: 5;
+    display: flex;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    sup {
+      font-size: .75em;
+      margin-top: -0.25em;
+      margin-left: 0.1em;
+    }
+    #logo {
+      content: url('Logo2b.svg');
+      width: 42px;
+      height: 32px;
+      margin-right: 12px;
+    }
+  };
+  #account{
+    display: block;
+    margin-left: auto;
+    content: url('AccountIcon.svg');
+    width: 27.75px;
+    height: 27.5px;
+    padding: 2.4px;
+  };
+  .account_actions {
+    position: relative;
+    display: inline-block;
+    top: 20px;
+    left: -150px;
+    filter: drop-shadow(0px 0.6px 1.8px rgba(0, 0, 0, 0.1)) drop-shadow(0px 3.2px 7.2px rgba(0, 0, 0, 0.13));
+    border-radius: 3px;
+    ul  {
+      background: $white;
+      color: $text;
+      width: 150px;
+      list-style-type: none;
+      margin: 0;
+      padding: 10px;
+      a {color: $text;}
+        position: absolute;
+    }
+  }
+  #account .account_actions_open {
+    display: block;
+    background: $white;
+    color: $text;
+  }
+  h1 {font-weight: 700;
+  font-size: 24px;
+  line-height: 32px; color: $white;}
+}
+
+//warnings/failure
+.warning h1 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
+}
+.failure {
+  padding-right: 1em
+}
+.failure::after{
+  margin-left: .25em;
+  height: .25em;
+  width: .25em;
+  content: url('WarningIcon.svg');
+}
+
+//accordions
+.accordion input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+.accordion .accordion_panel-content {display: none;}
+.accordion input:checked {
+  ~ .accordion_panel-content {
+    display:block;
+  }
+}
