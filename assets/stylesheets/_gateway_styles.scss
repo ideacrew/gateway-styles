@@ -252,3 +252,6 @@ header {
     }
   }
 }
+
+// block printing in fti
+@media print { .noprint { display:none } }
