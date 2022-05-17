@@ -1,0 +1,14 @@
+<%= paginator.render do %>
+  <nav class="pagination">
+    <%= prev_page_tag %>
+    <div class="page-map">
+      Page
+      <input type="number" class="page-input" value="<%= current_page %>" onfocusout="goToPage(this)" />
+      of
+      <span><%= total_pages %></span>
+    </div>
+    <%= next_page_tag %>
+  </nav>
+<% end %>
+
+

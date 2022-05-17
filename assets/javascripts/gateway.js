@@ -38,3 +38,10 @@ function searchTable(input) {
     }
   }
 }
+
+// go to specific page w/ kaminari pagination
+function goToPage(inputObj) {
+  let url = new URL(window.location.href);
+  url.searchParams.set('page', inputObj.value);
+  window.location.href = url;
+}
