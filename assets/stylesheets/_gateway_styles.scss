@@ -83,13 +83,14 @@ label {
   display: block;
   font-weight: 600;
 }
-button {
+button, .button {
   background: $primary;
   border-radius: 6px;
   color: $white;
   font-weight: 700;
   border: 0;
   padding: 4px 10px;
+  text-decoration: none;
 }
 
 //search 
