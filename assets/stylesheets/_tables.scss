@@ -33,6 +33,24 @@ tr:hover td, tr:hover{
   padding: .25em 0;
   margin: 0;
   border: none;
+  font-size: 16px;
+}
+.display_table th {
+  font-weight: 700;
+  padding: .25em 0;
+  margin: 0;
+  border: none;
+  font-size: 16px;
+}
+.display_table th.heading {
+  padding-top: 1em;
+  padding-bottom: 0;
+  border-bottom: 5px solid $text;
+}
+.display_table th.subhead {
+  padding-top: .75em;
+  padding-bottom: 0;
+  border-bottom: 1px solid $text;
 }
 .display_table td + td {
   padding-left: .5em;
