@@ -173,8 +173,20 @@ h4 {
     font-weight: normal;
   }
 }
-.darker-font {
-  color: darken($primary, 10%)
+.darker-font-20 {
+  color: darken($primary, 20%)
+}
+.darker-font-30 {
+  color: darken($primary, 30%)
+}
+.darker-font-40 {
+  color: darken($primary, 40%)
+}
+.darker-font-50 {
+  color: darken($primary, 50%)
+}
+.darker-font-60 {
+  color: darken($primary, 60%)
 }
 //header
 header {
