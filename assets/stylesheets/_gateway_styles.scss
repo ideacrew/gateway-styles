@@ -83,7 +83,7 @@ label {
   display: block;
   font-weight: 600;
 }
-button, .button {
+button, .button, input[type=submit] {
   background: $primary;
   border-radius: 6px;
   color: $white;
@@ -118,6 +118,20 @@ button, .button {
     background-position: center center;
   }
 }
+
+//devise
+.devise {
+  display: flex;
+  justify-content: center;
+  
+}
+.devise-form {
+  padding: 1em;
+  box-shadow: 0px 1.2px 3.6px rgba(0, 0, 0, 0.1), 0px 6.4px 14.4px rgba(0, 0, 0, 0.13);
+  border-radius: 10px;
+  width: 400px;
+}
+
 
 
 //date selector
