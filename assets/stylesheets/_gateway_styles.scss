@@ -16,12 +16,16 @@ $placeholder: #A39F9B;
 $primary: #0050B2 !default;
 $offwhite: #E5E5E5;
 $lighttext: #605E5C;
+$green: #69A30D;
 
 @function url-friendly-colour($colour) {
   @return '%23' + str-slice('#{$colour}', 2, -1)
 }
 
 @import "tables";
+
+// resource registry
+@import "registry";
 
 // layout
 body, html {
